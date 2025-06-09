@@ -806,7 +806,7 @@ gameStarted = false; // Das Spiel startet erst, wenn zielSetzen aufgerufen wird
   // --- ActionListener für die Buttons 0-24 (linke Seite, Computer-Felder) ---
   // Wenn das Spiel läuft, prüfe Treffer und lasse den Computer schießen
   //unformatiert damit es lesbar bleibt
-  public void bX_ActionPerformed(ActionEvent evt) {
+public void bX_ActionPerformed(ActionEvent evt) {
     if (gameStarted) {
         feldCheck(bX, ComputerZielName, true);
         if (gameStarted) {
@@ -1006,35 +1006,108 @@ public void bX24_ActionPerformed(ActionEvent evt) {
         }
     }
 }
-
 // --- ActionListener für die Buttons 25-49 (rechte Seite, Spieler-Felder) ---
-  // Beim Klick wird zielSetzen aufgerufen, um das eigene Ziel zu setzen
-  public void bX25_ActionPerformed(ActionEvent evt)    { zielSetzen(bX25); }
-  public void bX26_ActionPerformed(ActionEvent evt)    { zielSetzen(bX26); }
-  public void bX27_ActionPerformed(ActionEvent evt)    { zielSetzen(bX27); }
-  public void bX28_ActionPerformed(ActionEvent evt)    { zielSetzen(bX28); }
-  public void bX29_ActionPerformed(ActionEvent evt)    { zielSetzen(bX29); }
-  public void bX30_ActionPerformed(ActionEvent evt)    { zielSetzen(bX30); }
-  public void bX31_ActionPerformed(ActionEvent evt)    { zielSetzen(bX31); }
-  public void bX32_ActionPerformed(ActionEvent evt)    { zielSetzen(bX32); }
-  public void bX33_ActionPerformed(ActionEvent evt)    { zielSetzen(bX33); }
-  public void bX34_ActionPerformed(ActionEvent evt)    { zielSetzen(bX34); }
-  public void bX35_ActionPerformed(ActionEvent evt)    { zielSetzen(bX35); }
-  public void bX36_ActionPerformed(ActionEvent evt)    { zielSetzen(bX36); }
-  public void bX37_ActionPerformed(ActionEvent evt)    { zielSetzen(bX37); }
-  public void bX38_ActionPerformed(ActionEvent evt)    { zielSetzen(bX38); }
-  public void bX39_ActionPerformed(ActionEvent evt)    { zielSetzen(bX39); }
-  public void bX40_ActionPerformed(ActionEvent evt)    { zielSetzen(bX40); }
-  public void bX41_ActionPerformed(ActionEvent evt)    { zielSetzen(bX41); }
-  public void bX42_ActionPerformed(ActionEvent evt)    { zielSetzen(bX42); }
-  public void bX43_ActionPerformed(ActionEvent evt)    { zielSetzen(bX43); }
-  public void bX44_ActionPerformed(ActionEvent evt)    { zielSetzen(bX44); }
-  public void bX45_ActionPerformed(ActionEvent evt)    { zielSetzen(bX45); }
-  public void bX46_ActionPerformed(ActionEvent evt)    { zielSetzen(bX46); }
-  public void bX47_ActionPerformed(ActionEvent evt)    { zielSetzen(bX47); }
-  public void bX48_ActionPerformed(ActionEvent evt)    { zielSetzen(bX48); }
-  public void bX49_ActionPerformed(ActionEvent evt)    { zielSetzen(bX49); }
+// Beim Klick wird zielSetzen aufgerufen, um das eigene Ziel zu setzen
 
+public void bX25_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX25); // Spieler wählt Feld 25 als Ziel
+}
+
+public void bX26_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX26); // Spieler wählt Feld 26 als Ziel
+}
+
+public void bX27_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX27); // Spieler wählt Feld 27 als Ziel
+}
+
+public void bX28_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX28); // Spieler wählt Feld 28 als Ziel
+}
+
+public void bX29_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX29); // Spieler wählt Feld 29 als Ziel
+}
+
+public void bX30_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX30); // Spieler wählt Feld 30 als Ziel
+}
+
+public void bX31_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX31); // Spieler wählt Feld 31 als Ziel
+}
+
+public void bX32_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX32); // Spieler wählt Feld 32 als Ziel
+}
+
+public void bX33_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX33); // Spieler wählt Feld 33 als Ziel
+}
+
+public void bX34_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX34); // Spieler wählt Feld 34 als Ziel
+}
+
+public void bX35_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX35); // Spieler wählt Feld 35 als Ziel
+}
+
+public void bX36_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX36); // Spieler wählt Feld 36 als Ziel
+}
+
+public void bX37_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX37); // Spieler wählt Feld 37 als Ziel
+}
+
+public void bX38_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX38); // Spieler wählt Feld 38 als Ziel
+}
+
+public void bX39_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX39); // Spieler wählt Feld 39 als Ziel
+}
+
+public void bX40_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX40); // Spieler wählt Feld 40 als Ziel
+}
+
+public void bX41_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX41); // Spieler wählt Feld 41 als Ziel
+}
+
+public void bX42_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX42); // Spieler wählt Feld 42 als Ziel
+}
+
+public void bX43_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX43); // Spieler wählt Feld 43 als Ziel
+}
+
+public void bX44_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX44); // Spieler wählt Feld 44 als Ziel
+}
+
+public void bX45_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX45); // Spieler wählt Feld 45 als Ziel
+}
+
+public void bX46_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX46); // Spieler wählt Feld 46 als Ziel
+}
+
+public void bX47_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX47); // Spieler wählt Feld 47 als Ziel
+}
+
+public void bX48_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX48); // Spieler wählt Feld 48 als Ziel
+}
+
+public void bX49_ActionPerformed(ActionEvent evt) {
+    zielSetzen(bX49); // Spieler wählt Feld 49 als Ziel
+}
   // --- Ziel setzen ---
   // Wird beim Klick auf ein Spieler-Feld (25-49) aufgerufen
   private void zielSetzen(JButton btn) {
