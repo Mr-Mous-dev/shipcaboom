@@ -37,7 +37,7 @@ java SpielShipcaboom
 ## Volgende Sachen wurden mithilfe Internet oder AI herausgefunden: 
 - Wie man Objekte zentriert? 
 (d.height - getSize().height oder width) / 2;
-- Schriftfarbe und Hintergrund ändern
+- Schriftfarbe und Hintergrund ändern?
 setBackground oder set Foreground
 - Wie zeigt man Messages?
 .showMessageDialog
