@@ -36,14 +36,14 @@ java SpielShipcaboom
 ```
 ## Volgende Sachen wurden mithilfe Internet oder AI herausgefunden: 
 - Wie man Objekte zentriert? 
-+ (d.height - getSize().height oder width) / 2;
+(d.height - getSize().height oder width) / 2;
 - Schriftfarbe und Hintergrund ändern
-+ setBackground oder set Foreground
+setBackground oder set Foreground
 - Wie zeigt man Messages?
-+ .showMessageDialog
+.showMessageDialog
 - Wie kann man interne Namen benutzen, um Bedingung zwischen den Buttons herzustellen?
-+ .setName
+.setName
 - Wie aktiviert man und deaktiviert man Buttons?
-+ .setEnabled(false oder true)
+.setEnabled(false oder true)
 - Wie frage ich nicht gesetzte Variablen?
-+ Variable == null
+Variable == null
