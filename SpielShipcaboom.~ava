@@ -1,0 +1,972 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Random;
+import java.io.*;
+
+public class SpielShipcaboom extends JFrame {
+  // Anfang Attribute
+  // start attributes
+  private JPanel jPanel1 = new JPanel(null, true);
+    private JProgressBar jProgressBar1 = new JProgressBar();
+    private JLabel lProgress = new JLabel();
+
+  private JButton bX = new JButton();
+  private JButton bX1 = new JButton();
+  private JButton bX2 = new JButton();
+  private JButton bX3 = new JButton();
+  private JButton bX4 = new JButton();
+  private JButton bX5 = new JButton();
+  private JButton bX6 = new JButton();
+  private JButton bX7 = new JButton();
+  private JButton bX8 = new JButton();
+  private JButton bX9 = new JButton();
+  private JButton bX10 = new JButton();
+  private JButton bX11 = new JButton();
+  private JButton bX12 = new JButton();
+  private JButton bX13 = new JButton();
+  private JButton bX14 = new JButton();
+  private JButton bX15 = new JButton();
+  private JButton bX16 = new JButton();
+  private JButton bX17 = new JButton();
+  private JButton bX18 = new JButton();
+  private JButton bX19 = new JButton();
+  private JButton bX20 = new JButton();
+  private JButton bX21 = new JButton();
+  private JButton bX22 = new JButton();
+  private JButton bX23 = new JButton();
+  private JButton bX24 = new JButton();
+  private JButton bX25 = new JButton();
+  private JButton bX26 = new JButton();
+  private JButton bX27 = new JButton();
+  private JButton bX28 = new JButton();
+  private JButton bX29 = new JButton();
+  private JButton bX30 = new JButton();
+  private JButton bX31 = new JButton();
+  private JButton bX32 = new JButton();
+  private JButton bX33 = new JButton();
+  private JButton bX34 = new JButton();
+  private JButton bX35 = new JButton();
+  private JButton bX36 = new JButton();
+  private JButton bX37 = new JButton();
+  private JButton bX38 = new JButton();
+  private JButton bX39 = new JButton();
+  private JButton bX40 = new JButton();
+  private JButton bX41 = new JButton();
+  private JButton bX42 = new JButton();
+  private JButton bX43 = new JButton();
+  private JButton bX44 = new JButton();
+  private JButton bX45 = new JButton();
+  private JButton bX46 = new JButton();
+  private JButton bX47 = new JButton();
+  private JButton bX48 = new JButton();
+  private JButton bX49 = new JButton();
+
+  private JLabel lShipCaboom = new JLabel();
+  private String randomName;
+private String computerTargetName = null; // Ziel des Computers (zwischen 0-24)
+private String playerTargetName = null;   // Dein Ziel (zwischen 25-49)
+private boolean gameStarted = false;
+  // end attributes
+  // Ende Attribute
+
+  public SpielShipcaboom() {
+    super();
+    setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+    int frameWidth = 1249;
+    int frameHeight = 648;
+    setSize(frameWidth, frameHeight);
+    Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+    int x = (d.width - getSize().width) / 2;
+    int y = (d.height - getSize().height) / 2;
+    setLocation(x, y);
+    setTitle("SpielShipcaboom");
+    setResizable(false);
+    Container cp = getContentPane();
+    cp.setLayout(null);
+    // start components
+    cp.setBackground(Color.BLACK);
+
+    // Panel
+    jPanel1.setBounds(168, 88, 928, 464);
+    jPanel1.setOpaque(false);
+    cp.add(jPanel1);
+
+    // Spinner
+
+    // --- Buttons: JEWEILS ALLE ELEMENTE ZUSAMMEN ---
+
+    // Button 0
+    bX.setBounds(0, 112, 64, 64);
+    bX.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX.setText("X");
+    bX.setName("Bidk0");
+    bX.setMargin(new Insets(2, 2, 2, 2));
+    bX.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX);
+
+    // Button 1
+    bX1.setBounds(72, 112, 64, 64);
+    bX1.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX1.setText("X");
+    bX1.setName("Bidk1");
+    bX1.setMargin(new Insets(2, 2, 2, 2));
+    bX1.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX1_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX1);
+
+    // Button 2
+    bX2.setBounds(144, 112, 64, 64);
+    bX2.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX2.setText("X");
+    bX2.setName("Bidk2");
+    bX2.setMargin(new Insets(2, 2, 2, 2));
+    bX2.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX2_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX2);
+
+    // Button 3
+    bX3.setBounds(216, 112, 64, 64);
+    bX3.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX3.setText("X");
+    bX3.setName("Bidk3");
+    bX3.setMargin(new Insets(2, 2, 2, 2));
+    bX3.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX3_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX3);
+
+    // Button 4
+    bX4.setBounds(288, 112, 64, 64);
+    bX4.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX4.setText("X");
+    bX4.setName("Bidk4");
+    bX4.setMargin(new Insets(2, 2, 2, 2));
+    bX4.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX4_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX4);
+
+    // Button 5
+    bX5.setBounds(0, 184, 64, 64);
+    bX5.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX5.setText("X");
+    bX5.setName("Bidk5");
+    bX5.setMargin(new Insets(2, 2, 2, 2));
+    bX5.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX5_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX5);
+
+    // Button 6
+    bX6.setBounds(72, 184, 64, 64);
+    bX6.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX6.setText("X");
+    bX6.setName("Bidk6");
+    bX6.setMargin(new Insets(2, 2, 2, 2));
+    bX6.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX6_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX6);
+
+    // Button 7
+    bX7.setBounds(144, 184, 64, 64);
+    bX7.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX7.setText("X");
+    bX7.setName("Bidk7");
+    bX7.setMargin(new Insets(2, 2, 2, 2));
+    bX7.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX7_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX7);
+
+    // Button 8
+    bX8.setBounds(216, 184, 64, 64);
+    bX8.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX8.setText("X");
+    bX8.setName("Bidk8");
+    bX8.setMargin(new Insets(2, 2, 2, 2));
+    bX8.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX8_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX8);
+
+    // Button 9
+    bX9.setBounds(288, 184, 64, 64);
+    bX9.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX9.setText("X");
+    bX9.setName("Bidk9");
+    bX9.setMargin(new Insets(2, 2, 2, 2));
+    bX9.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX9_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX9);
+
+    // Button 10
+    bX10.setBounds(0, 256, 64, 64);
+    bX10.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX10.setText("X");
+    bX10.setName("Bidk10");
+    bX10.setMargin(new Insets(2, 2, 2, 2));
+    bX10.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX10_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX10);
+
+    // Button 11
+    bX11.setBounds(72, 256, 64, 64);
+    bX11.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX11.setText("X");
+    bX11.setName("Bidk11");
+    bX11.setMargin(new Insets(2, 2, 2, 2));
+    bX11.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX11_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX11);
+
+    // Button 12
+    bX12.setBounds(144, 256, 64, 64);
+    bX12.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX12.setText("X");
+    bX12.setName("Bidk12");
+    bX12.setMargin(new Insets(2, 2, 2, 2));
+    bX12.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX12_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX12);
+
+    // Button 13
+    bX13.setBounds(216, 256, 64, 64);
+    bX13.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX13.setText("X");
+    bX13.setName("Bidk13");
+    bX13.setMargin(new Insets(2, 2, 2, 2));
+    bX13.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX13_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX13);
+
+    // Button 14
+    bX14.setBounds(288, 256, 64, 64);
+    bX14.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX14.setText("X");
+    bX14.setName("Bidk14");
+    bX14.setMargin(new Insets(2, 2, 2, 2));
+    bX14.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX14_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX14);
+
+    // Button 15
+    bX15.setBounds(0, 328, 64, 64);
+    bX15.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX15.setText("X");
+    bX15.setName("Bidk15");
+    bX15.setMargin(new Insets(2, 2, 2, 2));
+    bX15.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX15_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX15);
+
+    // Button 16
+    bX16.setBounds(72, 328, 64, 64);
+    bX16.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX16.setText("X");
+    bX16.setName("Bidk16");
+    bX16.setMargin(new Insets(2, 2, 2, 2));
+    bX16.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX16_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX16);
+
+    // Button 17
+    bX17.setBounds(144, 328, 64, 64);
+    bX17.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX17.setText("X");
+    bX17.setName("Bidk17");
+    bX17.setMargin(new Insets(2, 2, 2, 2));
+    bX17.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX17_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX17);
+
+    // Button 18
+    bX18.setBounds(216, 328, 64, 64);
+    bX18.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX18.setText("X");
+    bX18.setName("Bidk18");
+    bX18.setMargin(new Insets(2, 2, 2, 2));
+    bX18.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX18_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX18);
+
+    // Button 19
+    bX19.setBounds(288, 328, 64, 64);
+    bX19.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX19.setText("X");
+    bX19.setName("Bidk19");
+    bX19.setMargin(new Insets(2, 2, 2, 2));
+    bX19.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX19_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX19);
+
+    // Button 20
+    bX20.setBounds(0, 400, 64, 64);
+    bX20.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX20.setText("X");
+    bX20.setName("Bidk20");
+    bX20.setMargin(new Insets(2, 2, 2, 2));
+    bX20.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX20_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX20);
+
+    // Button 21
+    bX21.setBounds(72, 400, 64, 64);
+    bX21.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX21.setText("X");
+    bX21.setName("Bidk21");
+    bX21.setMargin(new Insets(2, 2, 2, 2));
+    bX21.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX21_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX21);
+
+    // Button 22
+    bX22.setBounds(144, 400, 64, 64);
+    bX22.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX22.setText("X");
+    bX22.setName("Bidk22");
+    bX22.setMargin(new Insets(2, 2, 2, 2));
+    bX22.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX22_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX22);
+
+    // Button 23
+    bX23.setBounds(216, 400, 64, 64);
+    bX23.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX23.setText("X");
+    bX23.setName("Bidk23");
+    bX23.setMargin(new Insets(2, 2, 2, 2));
+    bX23.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX23_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX23);
+
+    // Button 24
+    bX24.setBounds(288, 400, 64, 64);
+    bX24.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX24.setText("X");
+    bX24.setName("Bidk24");
+    bX24.setMargin(new Insets(2, 2, 2, 2));
+    bX24.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX24_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX24);
+
+    // Button 25
+    bX25.setBounds(568, 112, 64, 64);
+    bX25.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX25.setText("X");
+    bX25.setName("Bidk25");
+    bX25.setMargin(new Insets(2, 2, 2, 2));
+    bX25.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX25_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX25);
+
+    // Button 26
+    bX26.setBounds(640, 112, 64, 64);
+    bX26.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX26.setText("X");
+    bX26.setName("Bidk26");
+    bX26.setMargin(new Insets(2, 2, 2, 2));
+    bX26.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX26_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX26);
+
+    // Button 27
+    bX27.setBounds(712, 112, 64, 64);
+    bX27.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX27.setText("X");
+    bX27.setName("Bidk27");
+    bX27.setMargin(new Insets(2, 2, 2, 2));
+    bX27.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX27_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX27);
+
+    // Button 28
+    bX28.setBounds(784, 112, 64, 64);
+    bX28.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX28.setText("X");
+    bX28.setName("Bidk28");
+    bX28.setMargin(new Insets(2, 2, 2, 2));
+    bX28.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX28_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX28);
+
+    // Button 29
+    bX29.setBounds(856, 112, 64, 64);
+    bX29.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX29.setText("X");
+    bX29.setName("Bidk29");
+    bX29.setMargin(new Insets(2, 2, 2, 2));
+    bX29.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX29_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX29);
+
+    // Button 30
+    bX30.setBounds(568, 184, 64, 64);
+    bX30.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX30.setText("X");
+    bX30.setName("Bidk30");
+    bX30.setMargin(new Insets(2, 2, 2, 2));
+    bX30.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX30_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX30);
+
+    // Button 31
+    bX31.setBounds(640, 184, 64, 64);
+    bX31.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX31.setText("X");
+    bX31.setName("Bidk31");
+    bX31.setMargin(new Insets(2, 2, 2, 2));
+    bX31.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX31_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX31);
+
+    // Button 32
+    bX32.setBounds(712, 184, 64, 64);
+    bX32.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX32.setText("X");
+    bX32.setName("Bidk32");
+    bX32.setMargin(new Insets(2, 2, 2, 2));
+    bX32.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX32_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX32);
+
+    // Button 33
+    bX33.setBounds(784, 184, 64, 64);
+    bX33.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX33.setText("X");
+    bX33.setName("Bidk33");
+    bX33.setMargin(new Insets(2, 2, 2, 2));
+    bX33.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX33_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX33);
+
+    // Button 34
+    bX34.setBounds(856, 184, 64, 64);
+    bX34.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX34.setText("X");
+    bX34.setName("Bidk34");
+    bX34.setMargin(new Insets(2, 2, 2, 2));
+    bX34.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX34_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX34);
+
+    // Button 35
+    bX35.setBounds(568, 256, 64, 64);
+    bX35.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX35.setText("X");
+    bX35.setName("Bidk35");
+    bX35.setMargin(new Insets(2, 2, 2, 2));
+    bX35.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX35_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX35);
+
+    // Button 36
+    bX36.setBounds(640, 256, 64, 64);
+    bX36.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX36.setText("X");
+    bX36.setName("Bidk36");
+    bX36.setMargin(new Insets(2, 2, 2, 2));
+    bX36.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX36_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX36);
+
+    // Button 37
+    bX37.setBounds(712, 256, 64, 64);
+    bX37.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX37.setText("X");
+    bX37.setName("Bidk37");
+    bX37.setMargin(new Insets(2, 2, 2, 2));
+    bX37.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX37_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX37);
+
+    // Button 38
+    bX38.setBounds(784, 256, 64, 64);
+    bX38.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX38.setText("X");
+    bX38.setName("Bidk38");
+    bX38.setMargin(new Insets(2, 2, 2, 2));
+    bX38.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX38_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX38);
+
+    // Button 39
+    bX39.setBounds(856, 256, 64, 64);
+    bX39.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX39.setText("X");
+    bX39.setName("Bidk39");
+    bX39.setMargin(new Insets(2, 2, 2, 2));
+    bX39.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX39_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX39);
+
+    // Button 40
+    bX40.setBounds(568, 328, 64, 64);
+    bX40.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX40.setText("X");
+    bX40.setName("Bidk40");
+    bX40.setMargin(new Insets(2, 2, 2, 2));
+    bX40.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX40_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX40);
+
+    // Button 41
+    bX41.setBounds(640, 328, 64, 64);
+    bX41.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX41.setText("X");
+    bX41.setName("Bidk41");
+    bX41.setMargin(new Insets(2, 2, 2, 2));
+    bX41.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX41_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX41);
+
+    // Button 42
+    bX42.setBounds(712, 328, 64, 64);
+    bX42.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX42.setText("X");
+    bX42.setName("Bidk42");
+    bX42.setMargin(new Insets(2, 2, 2, 2));
+    bX42.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX42_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX42);
+
+    // Button 43
+    bX43.setBounds(784, 328, 64, 64);
+    bX43.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX43.setText("X");
+    bX43.setName("Bidk43");
+    bX43.setMargin(new Insets(2, 2, 2, 2));
+    bX43.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX43_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX43);
+
+    // Button 44
+    bX44.setBounds(856, 328, 64, 64);
+    bX44.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX44.setText("X");
+    bX44.setName("Bidk44");
+    bX44.setMargin(new Insets(2, 2, 2, 2));
+    bX44.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX44_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX44);
+
+    // Button 45
+    bX45.setBounds(856, 400, 64, 64);
+    bX45.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX45.setText("X");
+    bX45.setName("Bidk45");
+    bX45.setMargin(new Insets(2, 2, 2, 2));
+    bX45.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX45_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX45);
+
+    // Button 46
+    bX46.setBounds(568, 400, 64, 64);
+    bX46.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX46.setText("X");
+    bX46.setName("Bidk46");
+    bX46.setMargin(new Insets(2, 2, 2, 2));
+    bX46.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX46_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX46);
+
+    // Button 47
+    bX47.setBounds(640, 400, 64, 64);
+    bX47.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX47.setText("X");
+    bX47.setName("Bidk47");
+    bX47.setMargin(new Insets(2, 2, 2, 2));
+    bX47.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX47_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX47);
+
+    // Button 48
+    bX48.setBounds(712, 400, 64, 64);
+    bX48.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX48.setText("X");
+    bX48.setName("Bidk48");
+    bX48.setMargin(new Insets(2, 2, 2, 2));
+    bX48.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX48_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX48);
+
+    // Button 49
+    bX49.setBounds(784, 400, 64, 64);
+    bX49.setFont(new Font("Dialog", Font.BOLD, 11));
+    bX49.setText("X");
+    bX49.setName("Bidk49");
+    bX49.setMargin(new Insets(2, 2, 2, 2));
+    bX49.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        bX49_ActionPerformed(evt);
+      }
+    });
+    jPanel1.add(bX49);
+
+    // --- Labels ---
+    lShipCaboom.setBounds(0, 0, 408, 77);
+    lShipCaboom.setText("Ship Caboom");
+    lShipCaboom.setFont(new Font("Dialog", Font.BOLD, 50));
+    lShipCaboom.setForeground(Color.WHITE);
+    jPanel1.add(lShipCaboom);
+
+
+
+    // Spielstart
+    randomName = hideMyCaboom();
+    jProgressBar1.setBounds(416, 320, 80, 24);
+    jProgressBar1.setFont(new Font("Dialog", Font.BOLD, 11));
+    jProgressBar1.setValue(30);
+    jPanel1.add(jProgressBar1);
+    lProgress.setBounds(416, 280, 111, 31);
+    lProgress.setText("Progress:");
+    lProgress.setFont(new Font("Dialog", Font.BOLD, 20));
+    lProgress.setForeground(Color.CYAN);
+    jPanel1.add(lProgress);
+    // end components
+    setVisible(true);
+
+    // Start-Message
+    JOptionPane.showMessageDialog(this, "Cabooooooooom!");
+
+    // Computer wÃƒÂ¤hlt ein Ziel zwischen 0 und 24
+    Random random = new Random();
+    int computerTarget = random.nextInt(25);
+    computerTargetName = "Bidk" + computerTarget;
+
+    // Spieler wÃƒÂ¤hlt ein Ziel durch Klick auf einen Button 25Ã¢â‚¬â€œ49
+    JOptionPane.showMessageDialog(this, "WÃƒÂ¤hle dein Ziel-Feld (25-49) durch Klick auf einen Button!");
+
+// NICHTS weiter machen! playerTargetName wird erst beim Klick gesetzt
+
+gameStarted = false; // Das Spiel startet erst, wenn zielSetzen aufgerufen wird
+
+    // Buttons 25ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ49 deaktivieren (auch dein Ziel, damit nur EIN Klick mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶glich ist)
+    for (int i = 25; i <= 49; i++) {
+        JButton btn = null;
+        switch(i) {
+            case 25: btn = bX25; break;
+            case 26: btn = bX26; break;
+            case 27: btn = bX27; break;
+            case 28: btn = bX28; break;
+            case 29: btn = bX29; break;
+            case 30: btn = bX30; break;
+            case 31: btn = bX31; break;
+            case 32: btn = bX32; break;
+            case 33: btn = bX33; break;
+            case 34: btn = bX34; break;
+            case 35: btn = bX35; break;
+            case 36: btn = bX36; break;
+            case 37: btn = bX37; break;
+            case 38: btn = bX38; break;
+            case 39: btn = bX39; break;
+            case 40: btn = bX40; break;
+            case 41: btn = bX41; break;
+            case 42: btn = bX42; break;
+            case 43: btn = bX43; break;
+            case 44: btn = bX44; break;
+            case 45: btn = bX45; break;
+            case 46: btn = bX46; break;
+            case 47: btn = bX47; break;
+            case 48: btn = bX48; break;
+            case 49: btn = bX49; break;
+        }
+        //if (btn != null) btn.setEnabled(false);
+    }
+    // Dein Ziel bleibt aktiviert, falls du es optisch hervorheben willst:
+    // Dieser Block wurde entfernt, da playerTarget nicht definiert ist und die Aktivierung des Ziel-Buttons
+    // bereits durch zielSetzen(JButton btn) erfolgt, wenn der Spieler sein Ziel auswÃƒÂ¤hlt.
+  }
+
+  // Methoden
+  // start methods
+  private String hideMyCaboom() {
+    Random random = new Random();
+    int randomNumber = random.nextInt(25); 
+    return "Bidk" + randomNumber;
+  }
+
+  private void feldCheck(JButton bXZahlName, String targetName, boolean isPlayer) {
+    if (bXZahlName.getName().equals(targetName)) {
+        bXZahlName.setText("Treffer!");
+        bXZahlName.setBackground(Color.RED);
+        bXZahlName.setEnabled(false);
+        if (isPlayer) {
+            JOptionPane.showMessageDialog(this, "Treffer! Du hast gewonnen!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Computer trifft! Du hast verloren!");
+        }
+        gameStarted = false;
+       } else {
+        bXZahlName.setText("Daneben");
+        bXZahlName.setBackground(Color.BLUE);
+        bXZahlName.setEnabled(false);
+    }
+}
+
+// ActionPerformed-Methoden fÃƒÆ’Ã‚Â¼r Buttons 0ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ24 (Spieler greift an)
+public void bX_ActionPerformed(ActionEvent evt)      { if (gameStarted) { feldCheck(bX, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX1_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX1, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX2_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX2, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX3_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX3, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX4_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX4, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX5_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX5, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX6_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX6, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX7_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX7, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX8_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX8, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX9_ActionPerformed(ActionEvent evt)     { if (gameStarted) { feldCheck(bX9, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX10_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX10, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX11_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX11, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX12_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX12, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX13_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX13, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX14_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX14, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX15_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX15, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX16_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX16, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX17_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX17, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX18_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX18, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX19_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX19, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX20_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX20, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX21_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX21, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX22_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX22, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX23_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX23, computerTargetName, true); if (gameStarted) computerTurn(); } }
+public void bX24_ActionPerformed(ActionEvent evt)    { if (gameStarted) { feldCheck(bX24, computerTargetName, true); if (gameStarted) computerTurn(); } }
+
+// ActionPerformed-Methoden fÃƒÆ’Ã‚Â¼r Buttons 25ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ49 (Spieler kann sie NUR EINMAL drÃƒÆ’Ã‚Â¼cken zum Ziel setzen)
+public void bX25_ActionPerformed(ActionEvent evt)    { zielSetzen(bX25); }
+public void bX26_ActionPerformed(ActionEvent evt)    { zielSetzen(bX26); }
+public void bX27_ActionPerformed(ActionEvent evt)    { zielSetzen(bX27); }
+public void bX28_ActionPerformed(ActionEvent evt)    { zielSetzen(bX28); }
+public void bX29_ActionPerformed(ActionEvent evt)    { zielSetzen(bX29); }
+public void bX30_ActionPerformed(ActionEvent evt)    { zielSetzen(bX30); }
+public void bX31_ActionPerformed(ActionEvent evt)    { zielSetzen(bX31); }
+public void bX32_ActionPerformed(ActionEvent evt)    { zielSetzen(bX32); }
+public void bX33_ActionPerformed(ActionEvent evt)    { zielSetzen(bX33); }
+public void bX34_ActionPerformed(ActionEvent evt)    { zielSetzen(bX34); }
+public void bX35_ActionPerformed(ActionEvent evt)    { zielSetzen(bX35); }
+public void bX36_ActionPerformed(ActionEvent evt)    { zielSetzen(bX36); }
+public void bX37_ActionPerformed(ActionEvent evt)    { zielSetzen(bX37); }
+public void bX38_ActionPerformed(ActionEvent evt)    { zielSetzen(bX38); }
+public void bX39_ActionPerformed(ActionEvent evt)    { zielSetzen(bX39); }
+public void bX40_ActionPerformed(ActionEvent evt)    { zielSetzen(bX40); }
+public void bX41_ActionPerformed(ActionEvent evt)    { zielSetzen(bX41); }
+public void bX42_ActionPerformed(ActionEvent evt)    { zielSetzen(bX42); }
+public void bX43_ActionPerformed(ActionEvent evt)    { zielSetzen(bX43); }
+public void bX44_ActionPerformed(ActionEvent evt)    { zielSetzen(bX44); }
+public void bX45_ActionPerformed(ActionEvent evt)    { zielSetzen(bX45); }
+public void bX46_ActionPerformed(ActionEvent evt)    { zielSetzen(bX46); }
+public void bX47_ActionPerformed(ActionEvent evt)    { zielSetzen(bX47); }
+public void bX48_ActionPerformed(ActionEvent evt)    { zielSetzen(bX48); }
+public void bX49_ActionPerformed(ActionEvent evt)    { zielSetzen(bX49); }
+
+// Hilfsmethode: Ziel setzen und Buttons deaktivieren
+private void zielSetzen(JButton btn) {
+    if (playerTargetName == null) {
+        playerTargetName = btn.getName();
+        btn.setBackground(Color.GREEN);
+        gameStarted = true;
+        JOptionPane.showMessageDialog(this, "Dein Ziel ist gesetzt! Jetzt kannst du links angreifen.");
+    }
+}
+
+// Computer greift an (Buttons 25ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ49)
+private void computerTurn() {
+
+    // Array mit den Buttons des Spielers (25ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ49)
+    JButton[] buttons = {
+        bX25, bX26, bX27, bX28, bX29, bX30, bX31, bX32, bX33, bX34,
+        bX35, bX36, bX37, bX38, bX39, bX40, bX41, bX42, bX43, bX44,
+        bX45, bX46, bX47, bX48, bX49
+    };
+
+    // Erzeuge ein Random-Objekt, um zufÃƒÆ’Ã‚Â¤llige Zahlen zu generieren
+    Random r = new Random();
+
+    // Variable fÃƒÆ’Ã‚Â¼r den ausgewÃƒÆ’Ã‚Â¤hlten Button
+    JButton target = null;
+
+    // Solange kein aktiver (enabled) Button gefunden wurde:
+    while (target == null) {
+        // WÃƒÆ’Ã‚Â¤hle eine zufÃƒÆ’Ã‚Â¤llige Zahl zwischen 0 und 24
+        int i = r.nextInt(buttons.length);
+
+        // Wenn der Button noch aktiviert ist (nicht schon angeklickt)
+        if (buttons[i].isEnabled()) {
+            // WÃƒÆ’Ã‚Â¤hle diesen Button als Ziel
+            target = buttons[i];
+        } 
+        // Wenn nicht: Schleife wiederholt sich, bis ein gÃƒÆ’Ã‚Â¼ltiger Button gefunden ist
+    }
+
+    // Wenn der Button der Zielname des Spielers ist (= Treffer!)
+    if (target.getName().equals(playerTargetName)) {
+        target.setText("Treffer!");          // Text auf dem Button ÃƒÆ’Ã‚Â¤ndern
+        target.setBackground(Color.RED);     // Button rot fÃƒÆ’Ã‚Â¤rben (Trefferfarbe)
+        JOptionPane.showMessageDialog(this, "Computer trifft! Du hast verloren!");
+        gameStarted = false;                 // Spiel beenden              // Alle Buttons deaktivieren
+    } else {
+        target.setText("Daneben");           // Kein Treffer ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ Text anzeigen
+        target.setBackground(Color.BLUE);    // Button blau fÃƒÆ’Ã‚Â¤rben (verfehlt)
+    }
+
+    // Ziel-Button deaktivieren, damit er nicht nochmal gewÃƒÆ’Ã‚Â¤hlt wird
+    target.setEnabled(false);
+}
+
+
+public static void main(String[] args) {
+    new SpielShipcaboom();
+}
+
+
+
+
+
+
+
+
+// end methods
+
+}
